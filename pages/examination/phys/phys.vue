@@ -3,7 +3,7 @@
 		<view class="title">
 			<view class="Info">
 				<text style="color: #FFFFFF ; font-size: larger; font-weight: 700;">  {{this.username}} </text>
-				<text style="color: #FFFFFF ;font-size: smaller;"> {{this.user_phone}} </text>
+				<text style="color: #FFFFFF ;font-size: smaller;"> {{this.userphone}} </text>
 			</view>
 			<button size="mini" style="border-width: 3rpx; border-color: #ffffff; margin-right: 15px;" type="default" @click="gotoHistory">预约记录</button>
 		</view>
@@ -32,8 +32,7 @@
 
 <script>
 	import MxDatePicker from "@/components/mx-datepicker/mx-datepicker.vue";
-	import {fake_fetchGet, fake_fetchPost} from "../fake_backend.js";
-	import {getHospitalList_Cov} from "../../../fetch/api.js";
+	import {getHospitalList_Phy, fetchGet} from "../../../fetch/api.js";
 	export default {
 		components: {
 		            MxDatePicker
@@ -42,26 +41,32 @@
 		data() {
 			return {
 				showPicker: false,
-				date: new Date().toLocaleDateString().slice(0, 10),
+				date: new Date().toLocaleDateString(),
 				type: 'date',
 				value: '',
 				
-				hospitals: null,
+				hospitals: [],
 				index: 0,
 				
 				username: "Default",
-				user_phone: 10086
+				userphone: 18888888888
 			}
 		},
 		
 		mounted () {
 		    
-		    
+		     
 		  },
 		  
-		onLoad() {
-			this.hospitals = fake_fetchGet(`/api/exam/covid/hospital`).data.hospitalList;  
-			console.log("data fetched"); 
+		onLoad(user_info) {
+			this.username = user_info.username;
+			this.userphone = user_info.userphone;
+			console.log("fetching...");
+			var val;
+			getHospitalList_Phy().then((res) => {
+				this.hospitals = res.data.hospitalList
+			});
+			console.log(this.hospitals);
 		},
 		
 		methods: {
@@ -87,7 +92,7 @@
 				
 			gotoHistory() {
 				uni.navigateTo({
-					url:"history/history_phy?user_phone=" + this.user_phone
+					url:"history_phy?user_phone=" + this.userphone
 				})
 			},
 			
@@ -98,10 +103,10 @@
 				console.log('date => '+ this.date);
 				
 				uni.navigateTo({
-					url:"timesel/timesel_phy?hospital=" + this.hospitals[this.index]
+					url:"timesel_phy?hospital=" + this.hospitals[this.index]
 						+ "&appoint_date=" +  this.date
 						+ "&username=" +  this.username
-						+ "&user_phone=" +  this.user_phone
+						+ "&user_phone=" +  this.userphone
 				})
 				
 				

@@ -19,6 +19,12 @@
 			}
 		},
 		{
+			"path": "pages/pharmacy/details",
+			"style": {
+				"navigationBarTitleText": "药品详情"
+			}
+		},
+		{
 			"path": "pages/forum/index",
 			"style": {
 				"navigationBarTitleText": "健康论坛"
@@ -31,109 +37,107 @@
 			}
 		},
 		{
+			"path": "pages/center/patient",
+			"style": {
+				"navigationBarTitleText": "个人病历"
+			}
+		},
+		{
+			"path": "pages/center/detail",
+			"style": {
+				"navigationBarTitleText": "病案详情"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登陆"
+			}
+		},
+		{
 			"path": "pages/test/index",
 			"style": {
 				"navigationBarTitleText": "测试页面"
 			}
+		},
+		{
+			"path": "pages/examination/phys/phys",
+			"style": {
+				"navigationBarTitleText": "体检预约",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/phys/timesel_phy",
+			"style": {
+				"navigationBarTitleText": "余量查询",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/phys/confirm_phy",
+			"style": {
+				"navigationBarTitleText": "确认预约信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/phys/history_phy",
+			"style": {
+				"navigationBarTitleText": "预约历史",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/covid/covid",
+			"style": {
+				"navigationBarTitleText": "核酸检测预约",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/covid/timesel_cov",
+			"style": {
+				"navigationBarTitleText": "余量查询",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/covid/confirm_cov",
+			"style": {
+				"navigationBarTitleText": "确认预约信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/covid/history_cov",
+			"style": {
+				"navigationBarTitleText": "预约历史",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/phys/server",
+			"style": {
+				"navigationBarTitleText": "体检余量修改",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/covid/server",
+			"style": {
+				"navigationBarTitleText": "核酸余量修改",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/examination/show_report",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
 		}
-	    ,{
-            "path" : "pages/examination/phys/phys",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "体检预约",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/examination/phys/timesel/timesel_phy",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "余量查询",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/examination/phys/confirm/confirm_phy",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "确认预约信息",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/examination/phys/history/history_phy",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "预约历史",
-                "enablePullDownRefresh": false
-            }
-        }
-		,{
-		    "path" : "pages/examination/covid/covid",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "核酸检测预约",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
-		,{
-		    "path" : "pages/examination/covid/timesel/timesel_cov",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "余量查询",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
-		,{
-		    "path" : "pages/examination/covid/confirm/confirm_cov",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "确认预约信息",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		}
-		,{
-		    "path" : "pages/examination/covid/history/history_cov",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "预约历史",
-		        "enablePullDownRefresh": false
-		    }
-		}
-        ,{
-            "path" : "pages/examination/exam_server",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "server",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/examination/phys/server",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "server",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/examination/covid/server",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "server",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 	"globalStyle": {
 		"pageOrientation": "portrait",
 		"navigationBarTitleText": "健康导航",
@@ -150,7 +154,6 @@
 			"navigationBarTextStyle": "black",
 			"navigationBarBackgroundColor": "#F1F1F1"
 		}
-
 	},
 	"tabBar": {
 		"color": "#7A7E83",
@@ -161,40 +164,40 @@
 		"list": [
 			{
 				"pagePath": "pages/registration/index",
-				"iconPath": "static/挂号预约.svg",
-				"selectedIconPath": "static/挂号预约.svg",
+				"iconPath": "static/挂号预约.png",
+				"selectedIconPath": "static/挂号预约.png",
 				"text": ""
 			},
 			{
 				"pagePath": "pages/examination/index",
-				"iconPath": "static/健康检测.svg",
-				"selectedIconPath": "static/健康检测.svg",
+				"iconPath": "static/健康检测.png",
+				"selectedIconPath": "static/健康检测.png",
 				"text": ""
 			},
 			{
 				"pagePath": "pages/pharmacy/index",
-				"iconPath": "static/在线药房.svg",
-				"selectedIconPath": "static/在线药房.svg",
+				"iconPath": "static/在线药房.png",
+				"selectedIconPath": "static/在线药房.png",
 				"text": ""
 			},
 			{
 				"pagePath": "pages/forum/index",
-				"iconPath": "static/健康论坛.svg",
-				"selectedIconPath": "static/健康论坛.svg",
+				"iconPath": "static/健康论坛.png",
+				"selectedIconPath": "static/健康论坛.png",
 				"text": ""
 			},
 			{
 				"pagePath": "pages/center/index",
-				"iconPath": "static/个人中心.svg",
-				"selectedIconPath": "static/个人中心.svg",
+				"iconPath": "static/个人中心.png",
+				"selectedIconPath": "static/个人中心.png",
 				"text": ""
-			},
-			{
-				"pagePath": "pages/test/index",
-				"iconPath": "",
-				"selectedIconPath": "",
-				"text": "测试页"
 			}
+			// {
+			// 	"pagePath": "pages/test/index",
+			// 	"iconPath": "",
+			// 	"selectedIconPath": "",
+			// 	"text": "测试页"
+			// }
 		]	
 	}
 }
